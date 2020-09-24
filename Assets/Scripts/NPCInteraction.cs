@@ -13,6 +13,7 @@ public class NPCInteraction : MonoBehaviour
     // Animation stuff
     public Transform idleStance;
     public Transform talkingStance;
+    public Shader interactShader;
 
     public string dialouge1 = "I'm a generic NPC.";
 
@@ -35,6 +36,7 @@ public class NPCInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             print("Player is in NPC's reach.");
+            //idleStance.GetComponent<Material>().shader = interactShader;
         }
     }
 
@@ -58,6 +60,8 @@ public class NPCInteraction : MonoBehaviour
         else { return; }
 
         idleStance.gameObject.SetActive(true);      // Set the idle animation true
+        //idleStance.GetComponent<Material>().shader = interactShader;
+
         talkingStance.gameObject.SetActive(false);  // Set the talking animation false
     }
 }

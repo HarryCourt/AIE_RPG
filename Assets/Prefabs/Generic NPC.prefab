@@ -341,8 +341,6 @@ GameObject:
   m_Component:
   - component: {fileID: 851963597237144366}
   - component: {fileID: 851963597237144400}
-  - component: {fileID: 851963597237144367}
-  - component: {fileID: 851963597237144364}
   - component: {fileID: 851963597237144365}
   - component: {fileID: 851963597237144401}
   m_Layer: 8
@@ -386,54 +384,9 @@ MonoBehaviour:
   dialogueText: {fileID: 851963596639474101}
   idleStance: {fileID: 7000208682448277264}
   talkingStance: {fileID: 5511108209984164138}
+  interactShader: {fileID: -6465566751694194690, guid: da8261b54f9560941b5896a4eca28fde,
+    type: 3}
   dialouge1: I'm a generic NPC.
---- !u!33 &851963597237144367
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851963597237144362}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &851963597237144364
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851963597237144362}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0fd8321916490fa429a8ec3135998550, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!136 &851963597237144365
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -471,6 +424,10 @@ PrefabInstance:
     - target: {fileID: 1045401375514670, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_Name
       value: CharacterTalking
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045401375514670, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1700878728757426, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_Name
@@ -514,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4026609465209992, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.031745996
+      value: -0.031745993
       objectReference: {fileID: 0}
     - target: {fileID: 4026609465209992, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.y
@@ -522,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4026609465209992, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7216216
+      value: 0.7216215
       objectReference: {fileID: 0}
     - target: {fileID: 4026609465209992, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.w
@@ -734,19 +691,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4215898427486252, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.12831941
+      value: -0.1283194
       objectReference: {fileID: 0}
     - target: {fileID: 4215898427486252, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.04474879
+      value: 0.044748787
       objectReference: {fileID: 0}
     - target: {fileID: 4215898427486252, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6069359
+      value: 0.60693586
       objectReference: {fileID: 0}
     - target: {fileID: 4215898427486252, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7830457
+      value: 0.7830456
       objectReference: {fileID: 0}
     - target: {fileID: 4215898427486252, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -842,7 +799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4653035768442264, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0013037623
+      value: 0.0013037624
       objectReference: {fileID: 0}
     - target: {fileID: 4653035768442264, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.y
@@ -850,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4653035768442264, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.2975124
+      value: 0.29751244
       objectReference: {fileID: 0}
     - target: {fileID: 4653035768442264, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_LocalRotation.w
@@ -985,6 +942,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9b15b2de7afef3d44b09f336603ef646, type: 2}
+    - target: {fileID: 95389170962898660, guid: f11fc98cf1e8d5547a9b2ec85cc9c664,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cf6039092f4507488e553b742d9e093, type: 2}
     - target: {fileID: 137166910513705172, guid: f11fc98cf1e8d5547a9b2ec85cc9c664,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1022,7 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1045401375514670, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1700878728757426, guid: f11fc98cf1e8d5547a9b2ec85cc9c664, type: 3}
       propertyPath: m_Name

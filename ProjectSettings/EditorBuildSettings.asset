@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/_UniversalRendererAssets/Scenes/SampleScene.unity
+    path: Assets/_Borrowed_Assets/_UniversalRendererAssets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
     path: Assets/Scenes/Forest.unity
