@@ -9,7 +9,7 @@ public class EnemyProperties : MonoBehaviour
     public int health = 5;              // The amount of health the Enemy has.
     public int damageValue = 1;         // The amount of health the Enemy can take away.
     
-    public float cooldownValue = 1f;    // The value which the timer will reset.
+    public float cooldownValue = 0.6f;    // The value which the timer will reset.
     private float cooldownTimer;        // The timer of the cool down.
 
     private bool hasDied;

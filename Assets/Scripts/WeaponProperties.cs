@@ -51,13 +51,13 @@ public class WeaponProperties : MonoBehaviour
     public void Attack()
     {
         // If the left mouse is pressed, play default attack.
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !anim.isPlaying)
         {
             anim.clip = attack;
             anim.Play();
         }
         // If the right mouse is pressed, play the alternate attack.
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1) && !anim.isPlaying)
         {
             anim.clip = altAttack;
             anim.Play();

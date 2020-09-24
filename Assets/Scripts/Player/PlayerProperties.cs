@@ -87,8 +87,6 @@ public class PlayerProperties : MonoBehaviour
         weaponEquiped.gameObject.SetActive(false);      // Disable the weapon the user is holding.
 
         dieText.text = "You will respawn in " + Mathf.RoundToInt(deathTimer) + " seconds."; // Set the text correctly.
-
-        
         
 
         // Getting a spawn point (The player will loop through all spawns. I dunno how to fix it)
