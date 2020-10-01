@@ -6,7 +6,8 @@ public class SlimeJump : MonoBehaviour
 {
     // Variables
     public float launchSpeed = 5f;      // The speed that the slime will launch from.
-    public float waitTime = 3f;         // Time needed before the slime can launch again.
+    public float waitTimeValue = 3f;    // The time that the slime will take.
+    public float waitTime;              // Time needed before the slime can launch again.
     public float distance = 10f;
 
     private Rigidbody rb;               // The rigidbody of the slime
@@ -19,7 +20,9 @@ public class SlimeJump : MonoBehaviour
         rb = GetComponent<Rigidbody>();                         // Get the Rigidbody component for later.
         enemyProp = GetComponent<EnemyProperties>();            // Get the enemy properties script.
         target = GameObject.FindGameObjectWithTag("Player");    // Find gameobject with Player
-    }
+
+        waitTime = waitTimeValue;   // Set the value.
+}
 
     private void Update()
     {
@@ -48,7 +51,7 @@ public class SlimeJump : MonoBehaviour
         else if (waitTime <= 0)
         {
             rb.velocity = launchSpeed * (transform.forward + transform.up); // Launch diagonally.
-            waitTime = 3f;
+            waitTime = waitTimeValue;
         }
     }
 }

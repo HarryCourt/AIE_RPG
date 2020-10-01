@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 6640031536443908515}
   - component: {fileID: 6640031536443908527}
   m_Layer: 8
-  m_Name: Slime
+  m_Name: KingSlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,8 +74,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6640031536443908512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 0.45, z: -18.85}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1806783985934769172}
   - {fileID: 4908108399431396853}
@@ -94,9 +94,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eac45769774231499df1d4a240a9277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchSpeed: 5
-  waitTime: 3
-  distance: 20
+  launchSpeed: 3
+  waitTime: 1
+  distance: 15
 --- !u!114 &1897255377001472160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,9 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76cc6a35a625784db90b28d6e37073d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  damageValue: 1
-  cooldownValue: 1
+  health: 15
+  damageValue: 3
+  cooldownValue: 0.5
   playerDamageZone: {fileID: 2773029442078694802}
   itemDrop: {fileID: 9155942619246764833, guid: 079e0888d482262418108e9ad6284c10,
     type: 3}
@@ -143,7 +143,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 40b9d85bf8cc2b94ba6e75d8bfacc626, type: 2}
+  - {fileID: 2100000, guid: cf22c020a2016284aa8d1d07ea673d75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

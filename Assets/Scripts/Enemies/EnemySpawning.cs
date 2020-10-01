@@ -8,8 +8,6 @@ public class EnemySpawning : EnemyProperties
     public float timeValue;
     private float timeLeft;
 
-    private EnemyProperties enemyProp;
-
     // Start is called before the first frame update
     void Start()
     {
