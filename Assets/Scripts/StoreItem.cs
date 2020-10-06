@@ -7,8 +7,10 @@ public class StoreItem : MonoBehaviour
 {
     public int price = 5;
 
+    // Display
     public Mesh itemMesh;
-    //public Transform priceText;
+    public Material itemMaterial;
+
     public UnityEvent function;
 
     private GameObject playerObject;
@@ -19,7 +21,9 @@ public class StoreItem : MonoBehaviour
 
     private void Awake()
     {
+        // Set mesh and materials to object.
         GetComponent<MeshFilter>().mesh = itemMesh;
+        GetComponent<MeshRenderer>().material = itemMaterial;
     }
 
     private void Update()

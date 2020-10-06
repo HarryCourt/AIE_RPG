@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 4
   itemMesh: {fileID: 4300002, guid: 34624edaccd9d704a95ed404d919b492, type: 3}
+  itemMaterial: {fileID: 0}
   function:
     m_PersistentCalls:
       m_Calls:
@@ -421,7 +422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 5
-  itemMesh: {fileID: 4300000, guid: b451a052397f03c4f8a04d915d1c0492, type: 3}
+  itemMesh: {fileID: 8840573060648733948, guid: f318c13e8bfcfa648a9c289781837c34,
+    type: 3}
+  itemMaterial: {fileID: 2100000, guid: cf22c020a2016284aa8d1d07ea673d75, type: 2}
   function:
     m_PersistentCalls:
       m_Calls:
@@ -543,7 +546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 1
-  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  itemMesh: {fileID: 4300000, guid: d3451d4509d73de44aa114b52f182239, type: 3}
+  itemMaterial: {fileID: 2100000, guid: 766912c548d03d04ea006bcc4c3f3025, type: 2}
   function:
     m_PersistentCalls:
       m_Calls:
