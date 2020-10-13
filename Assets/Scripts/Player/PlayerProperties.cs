@@ -17,6 +17,7 @@ public class PlayerProperties : MonoBehaviour
     public Text coinText;
 
     public Transform diePanel;
+    public Transform winPanel;
     public Text dieText;
 
     // --------
@@ -36,7 +37,8 @@ public class PlayerProperties : MonoBehaviour
     /// 4. Add coins (Done)
     /// 
     /// NOTE WITH WEAPONS:
-    /// WEAPONS IS EXTREMELY UNDER-DEVELOPED. NEEDS TO BE WORKED ON MORE
+    /// 23/09/2020: WEAPONS IS EXTREMELY UNDER-DEVELOPED. NEEDS TO BE WORKED ON MORE
+    /// 12/10/2020: eih, its fine
     /// 
     /// </summary>
 
@@ -55,9 +57,10 @@ public class PlayerProperties : MonoBehaviour
     {
         // Change variables.
         healthText.text = health + "/" + healthValue;
-        coinText.text = "$" + coins;
+        coinText.text = "$" + coins + "/80";
 
         WeaponAttack(); // Have the player able to attack.
+        WinCondition();
 
         // Instant death
         if (Input.GetKeyDown(KeyCode.BackQuote)) health = 0;
@@ -107,6 +110,23 @@ public class PlayerProperties : MonoBehaviour
 
             health = healthValue;                                       // Set health back.
             deathTimer = 5f;                                            // Reset timer.
+        }
+    }
+
+    private void WinCondition()
+    {
+        if (coins < 80) { return; }
+        
+        if (coins >= 80)       
+        {
+            coins = 80;                                                     // Perma set it
+            GetComponent<PlayerMovement>().enabled = false;    // Set movement unactive.
+
+            // Show cursor.
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            winPanel.gameObject.SetActive(true);
         }
     }
     #endregion

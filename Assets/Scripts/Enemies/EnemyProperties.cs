@@ -34,7 +34,10 @@ public class EnemyProperties : MonoBehaviour
         cooldownTimer = 0;  // Reset the timer.
         hasDied = false;
 
-        audioSource.clip = damage1;
+        if (audioSource != null) { audioSource.clip = damage1; }
+        else { return; }
+
+        
     }
 
     private void Update()

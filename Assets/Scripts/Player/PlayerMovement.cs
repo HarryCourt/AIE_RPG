@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        MouseCursor();   // Let players change their options of CursorLock
+
         // Make player go fowards where the camera is facing.
         float yRotation = playerCamera.transform.eulerAngles.y;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
@@ -44,5 +46,22 @@ public class PlayerMovement : MonoBehaviour
             cc.SimpleMove(gravity);
         }
         else { return; }
+    }
+
+    void MouseCursor()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            // Show cursor.
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            // Hide cursor.
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }
