@@ -6,3 +6,5 @@ Features:
 - WoW-style movement
 - A customizable shop and currency
 - Interactable NPC's
+
+<a href="https://aie.edu.au/"> You can find AIE at their website here.</a>
